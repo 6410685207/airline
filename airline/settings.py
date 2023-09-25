@@ -125,5 +125,12 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://963qvh-8000.csb.app/'
+    'https://963qvh-8000.csb.app'
 ]
+
+# Add this code at the end
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+    
